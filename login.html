@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - TechZone</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Login to <span>CompuCore</span></h2>
+                <p>Your favorite tech store</p>
+            </div>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe"> 
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div class="error-message" id="error-message"></div>
+            </form>
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </div>
+    <!--INSERT INTO `login` (`Sno`, `username`, `password`, `dt`) VALUES (NULL, 'chinmay', '0909', '2025-01-20 04:48:20.000000'); -->
+    <script src="login.js"></script>
+</body>
+</html>

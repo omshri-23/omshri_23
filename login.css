@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;            
+        background: linear-gradient(-45deg, #415800, #e560dc, #ffb374, #ef5f5f, #d840b6);        
+        background-size: 400% 400%;      
+        animation: bg 12s ease infinite;      
+        }        
+        @keyframes bg{       
+        0%{       
+        background-position: 0% 50%;       
+        }      
+        50%{        
+        background-position: 100% 100%;        
+        }       
+        100%{        
+        background-position: 0% 50%;        
+       }      
+        Like
+        Dislike
+        
+        }
+   
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-card {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+.login-header h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 600;
+}
+
+.login-header span {
+    color: #42a5f5;
+}
+
+.login-header p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    position: relative;
+}
+
+.input-field input:focus {
+    border-color: #42a5f5;
+    box-shadow: 0 0 5px rgba(66, 165, 245, 0.6);
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    font-size: 14px;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label {
+    top: 5px;
+    font-size: 12px;
+    color: #42a5f5;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #42a5f5;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #1e88e5;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #42a5f5;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

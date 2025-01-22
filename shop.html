@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Store</title>
+  <link rel="stylesheet" href="stylesforshop.css">
+</head>
+<body>
+  <header>
+    <h1>Online Store</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#laptops">Laptops</a></li>
+        <li><a href="#desktops">Desktops</a></li>
+        <li><a href="#pc-parts">PC Parts</a></li>
+        <li><a href="#accessories">Accessories</a></li>
+        <li><a href="#cart">🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="laptops" class="product-category">
+      <h2>Laptops</h2>
+      <div class="product" data-category="laptops">
+        <img src="images for website\pngegg.png" alt="Laptop 1">
+        <p>Macbook Air Pro - $1200</p>
+        <button onclick="addToCart('Macbook Air Pro', 1200)">Add to Cart</button>
+      </div>
+      <div class="product" data-category="laptops">
+        <img src="images for website\asus.png" alt="Laptop 2">
+        <p>Asus ROG Strix - $900</p>
+        <button onclick="addToCart('Asus ROG Strix', 900)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="desktops" class="product-category">
+      <h2>Desktops</h2>
+      <div class="product" data-category="desktops">
+        <img src="images for website\samsung-27-bezel-less.jpg" alt="Desktop 1">
+        <p>Samsung-27-Bezelless - $800</p>
+        <button onclick="addToCart('Samsung-27-Bezelless', 800)">Add to Cart</button>
+      </div>
+      <div class="product" data-category="desktops">
+        <img src="images for website\Essential.jpg" alt="Desktop 2">
+        <p>Essential S3 - $1100</p>
+        <button onclick="addToCart('Essential S3 ', 1100)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="pc-parts" class="product-category">
+      <h2>PC Parts</h2>
+      <div class="product" data-category="pc-parts">
+        <img src="images for website\ryzen.jpg" alt="PC Part 1">
+        <p>Ryzen 9 9800x - $150</p>
+        <button onclick="addToCart('Ryzen 9 9800x', 150)">Add to Cart</button>
+      </div>
+      <div class="product" data-category="pc-parts">
+        <img src="images for website\motherboard.jpg" alt="PC Part 2">
+        <p>Gigabyte b450m ds3h - $200</p>
+        <button onclick="addToCart('Gigabyte b450m ds3h', 200)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="accessories" class="product-category">
+      <h2>Accessories</h2>
+      <div class="product" data-category="accessories">
+        <img src="images for website\Keyboard.jpg" alt="Accessory 1">
+        <p>Keyboard mouse combo - $50</p>
+        <button onclick="addToCart('Keyboard mouse combo', 50)">Add to Cart</button>
+      </div>
+      <div class="product" data-category="accessories">
+        <img src="images for website\Speaker.jpg" alt="Accessory 2">
+        <p>Speaker -Creative- $30</p>
+        <button onclick="addToCart('Speaker -Creative', 30)">Add to Cart</button>
+      </div>
+    </section>
+
+    <div class="carts">
+      <section id="cart">
+        <h2>🛒 Cart</h2>
+        <ul id="cart-list">
+          <!-- Cart items will appear here -->
+        </ul>
+        <p id="total-price">Total: $0</p>
+      </section>
+
+      <section id="order-section">
+        <h3>Order Details</h3>
+        <form id="order-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="address">Shipping Address</label>
+          <textarea id="address" name="address" rows="4" required></textarea>
+
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
