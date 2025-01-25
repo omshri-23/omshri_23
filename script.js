@@ -52,4 +52,5 @@ document.getElementById("order-form").addEventListener("submit", function(event)
   alert("Order placed successfully!");
   cart = []; // Clear the cart after placing the order
   updateCartDisplay(); // Update the cart display
+    
 });
