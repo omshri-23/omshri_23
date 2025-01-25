@@ -12,7 +12,7 @@
     <div class="container">
       <!-- Logo -->
       <div class="logo">
-        <a href="#">CompuCore</a>
+        <a href="#">TopByte</a>
       </div>
 
       <!-- Navigation Bar -->
@@ -27,9 +27,9 @@
               <li><a href="shop.html#accessories">Accessories</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="#">Contact</a></li>
           <li><a href="login.html">Login</a></li>
+          
+          
         </ul>
       </nav>
 
@@ -45,23 +45,101 @@
         </div>
          <!-- Call to Action Button -->
   <div class="cta-button">
-    <a href="shop.html" class="butt">Shop </a>
+    <a href="shop.html" class="butt">Shop</a>
   </div>
- 
+  <div class="menu-container">
+    <button class="menu-button" id="menuButton" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+    <div class="menu" id="menu">
+      <a href="signup.html">Sign Up</a>
+        <a href="#">Contact</a>
+        <a href="about.html">About Us</a>
+        <a href="#my-fav">My Fav</a>
+        <a href="#settings">Settings</a>
+        <a href="#help-center">Help Center</a>
+        
+    </div>
+</div>
   </header>
   <div>
     <div class="content">
     <h1 class="anim">Discover the Latest in Tech & Electronics</h1>
-    <p class="anim">Your favorite gadgets, now just a click away! Shop the latest in electronics for home, work, and play.
+    <p class="anim"> Your favorite gadgets, now just a click away! Shop the latest in electronics for home, work, and play.
       <br> what are you waiting for lets check your favourite gadgets.
     </p>
+    <div class="right-content">
+      <div id="carousel" class="carousel">
+        <img src="/images/laptop.jpg" alt="Laptop X200">
+        <div class="carousel-content">
+          <h2>Laptop X200</h2>
+          <p>$1200</p>
+        </div>
+      </div>
+    </div>
   <div class="bttn anim">
     <a href="shop.html" class="butt">Shop Now</a>
   </div>
+  
   </div>
-<img src="images for website\products.png" class="hero-img anim">
 <section >
 
 </div>
+<script>
+  function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const menuButton = document.getElementById('menuButton');
+
+      if (menu.style.display === 'none' || menu.style.display === '') {
+          menu.style.display = 'flex';
+          menuButton.classList.add('active');
+      } else {
+          menu.style.display = 'none';
+          menuButton.classList.remove('active');
+      }
+  }
+
+  // Close menu if clicked outside
+  document.addEventListener('click', function (event) {
+      const menu = document.getElementById('menu');
+      const menuButton = document.getElementById('menuButton');
+
+      if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+          menu.style.display = 'none';
+          menuButton.classList.remove('active');
+      }
+  })
+  const devices = [
+      { name: "Laptop X200", image:"images/asus.png", price: "$1200" },
+      { name: "Gaming PC Z500", image: "/images/pngegg.png", price: "$2200" },
+      { name: "Monitor UltraHD", image: "/images/samsung-27-bezel-less.jpg", price: "$300" },
+      { name: "Mechanical Keyboard", image: "/images/Essential.jpg", price: "$100" },
+    ];
+
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+
+    function updateCarousel() {
+      const device = devices[currentIndex];
+      carousel.style.opacity = 0;
+      setTimeout(() => {
+        carousel.innerHTML = `
+          <img src="${device.image}" alt="${device.name}">
+          <div class="carousel-content">
+            <h2>${device.name}</h2>
+            <p>${device.price}</p>
+          </div>
+        `;
+        carousel.style.opacity = 1;
+      }, 500);
+    }
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % devices.length;
+      updateCarousel();
+    }, 2000);
+</script>
 </body>
 </html>
