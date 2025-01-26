@@ -9,7 +9,7 @@
     box-sizing: border-box;
   }
   
-  body body {
+  body {
     background-image: url('images/background.jpg'); /* Add your background image here */
       background-size: cover;
       background-position: center;
