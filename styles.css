@@ -9,9 +9,17 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-90deg, #2C5364, #0F2027);/* Black to Yellow gradient */
+  body body {
+    background-image: url('images/background.jpg'); /* Add your background image here */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-color: #000; /* Fallback color */
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: whitesmoke;
   }
     
 
